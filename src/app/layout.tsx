@@ -1,6 +1,5 @@
 import HeaderWrapper from '@/components/shared/HeaderWrapper';
 import SmoothScrollProvider from '@/components/shared/SmoothScroll';
-import DemoShowcase from '@/components/shared/demo-showcase';
 import Footer from '@/components/shared/footer/Footer';
 import { AppContextProvider } from '@/context/AppContext';
 import { interTight } from '@/utils/font';
@@ -25,7 +24,6 @@ export default function RootLayout({
           <Suspense>
             <SmoothScrollProvider>
               <HeaderWrapper />
-              <DemoShowcase activeDemoId={3} />
               {children}
               <Footer />
             </SmoothScrollProvider>
