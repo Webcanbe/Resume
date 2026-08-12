@@ -30,10 +30,9 @@ import { createHash } from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-const ORIGIN = (process.env.REAL_IMAGES_ORIGIN || 'https://next-saas-next.vercel.app').replace(
-  /\/+$/,
-  ''
-);
+const ORIGIN = (
+  process.env.REAL_IMAGES_ORIGIN || 'https://ai-resume-builder-two-lime.vercel.app'
+).replace(/\/+$/, '');
 const PUBLIC_DIR = path.resolve(process.cwd(), 'public');
 const IMAGES_DIR = path.join(PUBLIC_DIR, 'images');
 const CONCURRENCY = Number(process.env.REAL_IMAGES_CONCURRENCY || 8);
